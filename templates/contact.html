@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Page</title>
+
+    <!-- adding the google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- adding the css file -->
+    <!-- <link rel="stylesheet" href="contact.css" /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+  </head>
+
+  <body>
+    <!-- creating the navigation menu -->
+    <nav>
+      <img src="{{ url_for('static', filename='iTerve.png') }}" alt="logo" />
+      <!-- <a href="{{ url_for('index') }}"></a> -->
+      <ul>
+        <li><a href="{{ url_for('index') }}" id="home">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('service') }}">Our services</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+      </ul>
+    </nav>
+      <!-- creating the main section -->
+      <main>
+        <!-- creating the contact form -->
+        <form method="post"action="/form" >
+          <h1>Contact Form</h1>
+
+          <div>
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" name="name">
+          </div>
+          
+          <div>
+            <label>Weight(kg)</label>
+            <input type="number" placeholder="Enter weight" name="weight">
+          </div>
+          
+          <div>
+            <label>Height(m)</label>
+            <input type="number" placeholder="Enter height" name="height">
+          </div>
+          <div>
+            <label>Age</label>
+            <input type="number" placeholder="Enter Age" name="age">
+             <button id="submit">Submit</button>
+        </form>
+      </main>
+  </body>
+</html>

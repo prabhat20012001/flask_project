@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Page</title>
+
+    <!-- adding the google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- adding the css file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+
+  <body>
+    <!-- creating the navigation menu -->
+    <nav>
+      <img src="{{ url_for('static', filename='iTerve.png') }}" alt="logo" />
+      <ul>
+        <li><a href="{{ url_for('index') }}" id="home">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('service') }}">Our services</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact us</a></li>
+      </ul>
+    </nav>
+
+    <!-- creating the hero section -->
+    <main>
+      <!-- creating the left section -->
+      <section class="leftSection">
+        <img class="topAngle" src="{{ url_for('static', filename='topAngle.png') }}" alt="topAngle" />
+        <h1>AI based vital check by your Personal phone!</h1>
+        <p>
+          AIVIOT AI team has worked intensively in the development of this innovative AI solution and referred over 1000
+          healthcare research papers to develop mature first AI model for training the extracted PPG waves and RGB data
+          for accurate outcome of key vitals.
+        </p>
+        <img class="bottomAngle" src="{{ url_for('static', filename='bottomAngle.png') }}" alt="bottomAngle" />
+        <img class="stethoscope" src="{{ url_for('static', filename='stethoscope.png') }}" alt="stethoscope" />
+        <button><a href="{{ url_for('contact') }}" id="demo">Request a Demo</a></button>
+        <img class="mouse" src="{{ url_for('static', filename='mouse.png') }}" alt="mouse" />
+      </section>
+
+      <!-- creating the right section -->
+      <section class="rightSection">
+        <img class="greenBox" src="{{ url_for('static', filename='greenBox.png') }}" alt="greenBox" />
+        <img class="blueBox" src="{{ url_for('static', filename='blueBox.png') }}" alt="blueBox" />
+        <img class="doctor" src="{{ url_for('static', filename='doctor.png') }}" alt="doctor" />
+      </section>
+    </main>
+  </body>
+</html>
